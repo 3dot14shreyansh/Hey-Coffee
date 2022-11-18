@@ -47,12 +47,12 @@ def wishme():
     else:
         speak("Good Night Sir, See You Tommorrow")
 
-    speak("Jarvis at your service sir, please tell me how may I help you.")
-    print("Jarvis at your service sir, please tell me how may I help you.")
+    speak("coffee at your service sir, please tell me how may I help you.")
+    print("coffee at your service sir, please tell me how may I help you.")
 
 def screenshot():
     img = pyautogui.screenshot()
-    img.save("C:\\Users\\KISHAN\\OneDrive\\Documents\\Jarvis 2.0\\ss3.png")
+    img.save("location")
 
 
 def takecommand():
@@ -85,8 +85,8 @@ if __name__ == "__main__":
             date()
 
         elif "who are you" in query:
-            speak("I'm JARVIS created by Mr. Kishan and I'm a desktop voice assistant.")
-            print("I'm JARVIS created by Mr. Kishan and I'm a desktop voice assistant.")
+            speak("I'm Coffee, built by shreyansh and I'm a desktop voice assistant.")
+            print("I'm Coffee, built by shreyansh and I'm a desktop voice assistant.")
 
         elif "how are you" in query:
             speak("I'm fine sir, What about you?")
@@ -120,7 +120,7 @@ if __name__ == "__main__":
             wb.open("stackoverflow.com")
 
         elif "play music" in query:
-            song_dir = "C:\\Users\\KISHAN\\Music"
+            song_dir = "location_of_music_file"
             songs = os.listdir(song_dir)
             print(songs)
             x = len(songs)
@@ -128,14 +128,14 @@ if __name__ == "__main__":
             os.startfile(os.path.join(song_dir, songs[y]))
 
         elif "open chrome" in query:
-            chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            chromePath = "Location"
             os.startfile(chromePath)
 
         elif "search on chrome" in query:
             try:
                 speak("What should I search?")
                 print("What should I search?")
-                chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+                chromePath = "Location"
                 search = takecommand()
                 wb.get(chromePath).open_new_tab(search)
                 print(search)
